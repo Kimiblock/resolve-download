@@ -27,10 +27,3 @@ if __name__ == "__main__":
     print("Extracting resolve installation...")
     with zipfile.ZipFile("./resolve.zip", 'r') as zip_file:
         zip_file.extractall('.')
-
-    print(f"Building meta info...")
-    build_metainfo(
-        app_id='com.blackmagic.ResolveStudio' if is_studio else 'com.blackmagic.Resolve',
-        app_description="DaVinci Resolve Studio" if is_studio else 'DaVinci Resolve',
-        app_tag=app_tag,
-    )
